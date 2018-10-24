@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AI五子棋</title>
+	<style type="text/css">
+		.box {
+			width: 240px;
+			height: 240px;
+			margin: 50px auto;
+		}
+		canvas {
+			display: block;
+			box-shadow: 0px 0px 10px #ccc;
+			background: url(./bg.png) no-repeat center center;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div style="margin:0 auto;width:200px;">
+<input type=button value="查看排行榜" onclick="window.open('http://59.78.8.51:5901/scoreboard/')"> 
+</div> 
+</body>
+</html>
+<script type="text/javascript" src="./index.js"></script>
+<script src="jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+
+	/*
+	 	* @param opts: {
+			width: 默认450
+			container: 父容器
+	 	} 
+	*/
+	var gobang = new Gobang();
+	gobang.init({
+		container: '.box',
+        width: 240,
+        id: 'Player1'
+	})
+</script>
